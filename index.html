@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>il mio sito web</h1>
+    <div id="banner">
+
+
+    </div>
+    <footer>
+        <p>footer</p>
+    </footer>
+    <!-- comment -->
+
+    <script type="text/babel">
+        const Banner = () => {
+            const title = "benvenuto nel mio sito"
+            const subtitle = "questo sito serve per testare react"
+            const indirizzo = "https://www.lucarulvoni.it"
+
+            return (
+
+                //this is a comment
+
+                <div classNamw="banner">
+                    <h1>{title.toUpperCase()}</h1>
+                    <p> {subtitle} </p>
+                    <p>oggi è : { new Date().toDateString()}</p>
+                    <p>NUmero casuale: {Math.random() * 100 }</p>
+                    <a href={indirizzo}>visita il sito</a>
+                        <div></div>
+                </div>
+            ) 
+        }
+
+        //render the component to the DOM 
+        ReactDOM.render(<Banner />, document.getElementById('banner'));
+
+
+    </script>
+
+</body>
+</html>
